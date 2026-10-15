@@ -29,7 +29,7 @@ void main() {
         'private': (
           SaintVincentAndTheGrenadinesPlates.private,
           SaintVincentAndTheGrenadinesThemes.private,
-          'P 2 4 0 1',
+          'P 2401',
         ),
       };
 
@@ -71,4 +71,15 @@ void main() {
       controller.dispose();
     });
   }
+
+  test('the digits are one four-digit field', () {
+    final PlateSpec spec = SaintVincentAndTheGrenadinesPlates.private;
+    expect(spec.slots.map((PlateSlot s) => s.length), <int>[1, 4]);
+    PlateController c = PlateController.fromValues(spec, ['P', '240']);
+    expect(c.isCompleted, isFalse);
+    c.dispose();
+    c = PlateController.fromValues(spec, ['P', '2401']);
+    expect(c.isCompleted, isTrue);
+    c.dispose();
+  });
 }

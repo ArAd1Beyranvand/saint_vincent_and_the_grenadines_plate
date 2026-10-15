@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/widgets.dart' show EdgeInsets;
 import 'package:plate_alphabet/plate_alphabet.dart';
 import 'package:plate_core/plate_core.dart';
@@ -19,7 +21,7 @@ import 'saint_vincent_and_the_grenadines_country.dart';
 abstract final class _Layout {
   static const double width = 520, height = 110;
   static const double letterCx = 92, letterWidth = 70;
-  static const double digitFirstCx = 213, digitPitch = 79, digitWidth = 70;
+  static const double digitFirstCx = 213, digitPitch = 79;
 }
 
 /// The Vincentian plate: `A 1234`, one letter and four digits, off-white on
@@ -48,22 +50,21 @@ abstract final class SaintVincentAndTheGrenadinesPlates {
           _Layout.height,
         ),
       ),
-      for (int i = 0; i < 4; i++)
-        PlateSlot(
-          alphabet: SaintVincentAndTheGrenadinesAlphabets.digits,
-          box: PlateBox(
-            _Layout.digitFirstCx +
-                _Layout.digitPitch * i -
-                _Layout.digitWidth / 2,
-            0,
-            _Layout.digitWidth,
-            _Layout.height,
-          ),
+      PlateSlot(
+        alphabet: SaintVincentAndTheGrenadinesAlphabets.digits,
+        box: PlateBox(
+          _Layout.digitFirstCx - _Layout.digitPitch / 2,
+          0,
+          _Layout.digitPitch * 4,
+          _Layout.height,
         ),
+        length: 4,
+        spacing: max(0, _Layout.digitPitch - 0.6 * 0.72 * _Layout.height),
+      ),
     ],
     textGroups: const <PlateTextGroup>[
       PlateTextGroup(<int>[0], key: 'letters'),
-      PlateTextGroup(<int>[1, 2, 3, 4], key: 'digits'),
+      PlateTextGroup(<int>[1], key: 'digits'),
     ],
   );
 
