@@ -10,10 +10,12 @@ class SaintVincentAndTheGrenadinesValidator extends GatedPlateValidator {
 
   static const String reason = 'A plate is one letter and four digits.';
 
+  static final RegExp _letter = RegExp(r'^[A-Z]$');
+
   @override
   PlateValidation judge(PlateEntry entry) =>
       isDigitsOfLength(entry.group('digits'), 4) &&
-          RegExp(r'^[A-Z]$').hasMatch(entry.group('letters'))
+          _letter.hasMatch(entry.group('letters'))
       ? const PlateValidation.valid()
       : const PlateValidation.invalid(reason);
 }
