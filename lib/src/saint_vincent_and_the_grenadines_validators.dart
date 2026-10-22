@@ -14,8 +14,7 @@ class SaintVincentAndTheGrenadinesValidator extends GatedPlateValidator {
 
   @override
   PlateValidation judge(PlateEntry entry) =>
-      isDigitsOfLength(entry.group('digits'), 4) &&
-          _letter.hasMatch(entry.group('letters'))
+      isDigitsOfLength(entry.group('digits'), 4) && _letter.hasMatch(entry.group('letters'))
       ? const PlateValidation.valid()
       : const PlateValidation.invalid(reason);
 }
