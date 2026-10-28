@@ -30,10 +30,14 @@ abstract final class _Layout {
 abstract final class SaintVincentAndTheGrenadinesPlates {
   static final PlateSpec private = PlateSpec(
     id: 'vc.private',
-    country: SaintVincentAndTheGrenadinesCountry.saint_vincent_and_the_grenadines,
+    country:
+        SaintVincentAndTheGrenadinesCountry.saint_vincent_and_the_grenadines,
     canvasWidth: _Layout.width,
     canvasHeight: _Layout.height,
-    panel: const PlatePanel(box: PlateBox(0, 0, 0, 0), padding: EdgeInsets.zero),
+    panel: const PlatePanel(
+      box: PlateBox(0, 0, 0, 0),
+      padding: EdgeInsets.zero,
+    ),
     noPanel: true,
     background: PlateSection.plain,
     slots: <PlateSlot>[
