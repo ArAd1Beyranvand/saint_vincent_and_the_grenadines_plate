@@ -1,7 +1,7 @@
 name: saint_vincent_and_the_grenadines_plate
 description: "Saint Vincent and the Grenadines's licence plates for the plate_core library — the one letter, four digit plate, off-white on black, with an advisory validator."
 version: 0.1.0
-repository: https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate
+repository: https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate/tree/main/flutter
 resolution: workspace
 
 environment:
