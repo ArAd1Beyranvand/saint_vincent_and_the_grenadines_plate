@@ -6,13 +6,24 @@ GO VEGAN 🌱
 
 From the mighty people of Iran to the resilient people of Saint Vincent and the Grenadines to view examples:
 
-https://platexample.ir/#/discover/saintvincentandthegrenadines
+https://platexample.ir/#/discover/saintvincentandthegrenadines:flutter
 
 # saint_vincent_and_the_grenadines_plate
 
-Saint Vincent and the Grenadines licence plates for `plate_core`.
+Saint Vincent and the Grenadines's licence plates for the plate_core library — the one letter, four digit plate, off-white on black, with an advisory validator.
 
-## Install
+## Languages
+
+| Language | Folder | Example |
+| --- | --- | --- |
+| Flutter / Dart | [`flutter/`](https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate/tree/main/flutter) | [platexample](https://platexample.ir/#/discover/saintvincentandthegrenadines:flutter) |
+| Kotlin | [`kotlin/`](https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate/tree/main/kotlin) | [platexample](https://platexample.ir/#/discover/saintvincentandthegrenadines:kotlin) |
+| Python | [`python/`](https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate/tree/main/python) | [platexample](https://platexample.ir/#/discover/saintvincentandthegrenadines:python) |
+| TypeScript | [`typescript/`](https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate/tree/main/typescript) | [platexample](https://platexample.ir/#/discover/saintvincentandthegrenadines:typescript) |
+
+## Quick start
+
+### Install
 
 ```yaml
 dependencies:
@@ -20,7 +31,7 @@ dependencies:
   saint_vincent_and_the_grenadines_plate: ^0.1.0
 ```
 
-## Use
+### Use
 
 ```dart
 import 'package:plate_core/plate_core.dart';
@@ -35,12 +46,24 @@ PlateCanvas(
 );
 ```
 
-## Contains
+## Specs
 
-- `SaintVincentAndTheGrenadinesCountry` — country panel: `saint_vincent_and_the_grenadines`.
-- `SaintVincentAndTheGrenadinesPlates` — 1 plate spec: `private`.
-- `SaintVincentAndTheGrenadinesThemes` — 1 theme: `private`.
-- `SaintVincentAndTheGrenadinesValidator` — advisory validator; flags the frame, never blocks a keystroke.
+Each spec is one plate layout.
+
+- `SaintVincentAndTheGrenadinesPlates.private` — id `vc.private`
+
+## Themes
+
+- `SaintVincentAndTheGrenadinesThemes.private`
+
+## Change it
+
+`PlateCanvas` takes `spec:` (an entry of `SaintVincentAndTheGrenadinesPlates`) and `theme:` (an entry of `SaintVincentAndTheGrenadinesThemes`). Set `validator:` to `SaintVincentAndTheGrenadinesValidator()` and `autoValidate: true` to show validation hints.
+
+## Also included
+
+- `SaintVincentAndTheGrenadinesCountry` — the country panel.
+- `SaintVincentAndTheGrenadinesValidator` — the plate validator.
 
 ## Plates
 
@@ -52,3 +75,6 @@ have no reference and are not implemented.
 
 Painted by [`plate_core`](https://pub.dev/packages/plate_core); alphabets shared through [`plate_alphabet`](https://pub.dev/packages/plate_alphabet); optional character picker in [`plate_keypad`](https://pub.dev/packages/plate_keypad).
 
+## License
+
+See [LICENSE](https://github.com/ArAd1Beyranvand/saint_vincent_and_the_grenadines_plate/blob/main/LICENSE).

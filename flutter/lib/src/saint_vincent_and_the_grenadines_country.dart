@@ -7,7 +7,6 @@ import 'saint_vincent_and_the_grenadines_colors.dart';
 abstract final class SaintVincentAndTheGrenadinesCountry {
   static const PlateCountry saint_vincent_and_the_grenadines = PlateCountry(
     code: 'vc',
-    captionLines: <String>[],
     panelColor: SaintVincentAndTheGrenadinesColors.field,
     panelTextColor: SaintVincentAndTheGrenadinesColors.ink,
   );

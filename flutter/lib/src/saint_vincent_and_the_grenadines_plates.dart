@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/widgets.dart' show EdgeInsets;
 import 'package:plate_alphabet/plate_alphabet.dart';
 import 'package:plate_core/plate_core.dart';
@@ -49,22 +47,17 @@ abstract final class SaintVincentAndTheGrenadinesPlates {
           _Layout.letterWidth,
           _Layout.height,
         ),
+        group: 'letters',
       ),
-      PlateSlot(
-        alphabet: SaintVincentAndTheGrenadinesAlphabets.digits,
-        box: PlateBox(
-          _Layout.digitFirstCx - _Layout.digitPitch / 2,
-          0,
-          _Layout.digitPitch * 4,
-          _Layout.height,
-        ),
-        length: 4,
-        spacing: max(0, _Layout.digitPitch - 0.6 * 0.72 * _Layout.height),
+      plateRun(
+        SaintVincentAndTheGrenadinesAlphabets.digits,
+        4,
+        left: _Layout.digitFirstCx - _Layout.digitPitch / 2,
+        top: 0,
+        pitch: _Layout.digitPitch,
+        height: _Layout.height,
+        group: 'digits',
       ),
-    ],
-    textGroups: const <PlateTextGroup>[
-      PlateTextGroup(<int>[0], key: 'letters'),
-      PlateTextGroup(<int>[1], key: 'digits'),
     ],
   );
 
